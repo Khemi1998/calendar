@@ -17,8 +17,16 @@ public class EventController {
     EventRepository repository;
 
     ArrayList<Event> events = new ArrayList<>();
+    //BODY CONTAINS DATA
+    //HEAD CONTAINS META, STATUS CODE
+        //STATUS IS WHAT'S HAPPENED WITH OUR REQUEST
+            //200 IS GOOD
+            //201 POST IS GOOD
+            //400 IS BAD REQUEST
+            //500 SERVER PROBLEM
 
     //READ
+    //ANNOTATION
     @GetMapping("/events")
     public ResponseEntity<List<Event>> getEvents () {
         return ResponseEntity.status(HttpStatus.OK).body(repository.findAll());

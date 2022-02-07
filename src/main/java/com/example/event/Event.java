@@ -14,14 +14,13 @@ public class Event {
     // Model
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Timestamp
     private int id;
     private String title;
     private String location;
-    private String description;
-
-    @Timestamp
     private LocalDate date;
     private LocalTime time;
+    private String description;
 
     public Event() {
     }
